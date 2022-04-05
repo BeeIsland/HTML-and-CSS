@@ -1,8 +1,12 @@
-p {
+#Max {
 	background-color: gold;
 	color: black;
 	font-family: impact;
 	font-weight: bold;
 	font-size: 40px;
 	text-align: center;
+}
+#min {
+	font-size: 30px;
+	text-shadow: 5px 5px 2px gold;
 }
