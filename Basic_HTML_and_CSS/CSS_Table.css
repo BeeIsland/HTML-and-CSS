@@ -1,0 +1,21 @@
+table {
+	margin: auto;
+	border: 3px solid silver;
+}
+.content:hover {
+	background-color: yellow;
+	color: black;
+}
+tr, th {
+	background-color: black;
+	color: cornsilk;
+}
+tr, td {
+	background-color: darkgreen;
+	color: white;
+}
+.firstCol {
+	background-color: black;
+	color: cornsilk;
+	width: 80px
+}
