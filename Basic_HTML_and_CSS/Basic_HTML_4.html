@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>TITLE</title>
+		<meta charset="utf-8">
+		<style>
+			.font_1 {
+				background-color: black;
+				color: yellow;
+				font-size: large;
+			}
+			.font_2 {
+				background-color: darkblue;
+				color: white;
+				font-size: medium;
+			}
+			.betterFont {
+				background-color: gold;
+				color: black;
+				font-family: impact,serif;
+				font_weight: bold;
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 class="font_1">This h2 element is styled per class attribute font_1</h2>
+		<h3 class="font_2">This h3 element is styled per class attribute font_2</h3>
+		<h4 class="font_1">Even though this is an h4 element, it is styled the same
+		as the h2 element because we pointed to the class attribute font_1</h4>
+		<p class="betterFont">This p element is better than the others because
+		it used the 'better font' class.</p>
+	</body>
+</html>
