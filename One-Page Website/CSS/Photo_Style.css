@@ -20,11 +20,13 @@
     border: 1px solid #021a40;
     background-color: rgb(255, 174, 0);
     box-shadow: 2px 2px 10px rgba(0,0,0,.7);
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .photo-container {
     text-align: center;
+    margin: 15px auto;
     width: 240px;
     height: 135px;
 }

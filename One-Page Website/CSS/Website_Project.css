@@ -41,6 +41,15 @@ a {
     display: inline;
     padding: 15px;
     margin: 5px;
+    transition-property: background, text;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .1s;
+}
+
+.navbar li:hover {
+    color: rgb(205, 126, 16);
+    background-color: rgba(0,0,0,.8);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -214,7 +223,7 @@ section {
     margin: 0px auto;
     background-color: rgba(100, 65, 0, .3);
     box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.5);
-    width: 786px;
+    width: auto;
 }
 
 #apply {
@@ -310,7 +319,6 @@ section {
     text-align: center;
     font-family: 'Raleway', sans-serif;
     margin: 30px 6%;
-    margin-left: -25%;
     padding: 7px 0px;
     width: 25%;
     height: 50px;
