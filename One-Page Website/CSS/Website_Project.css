@@ -14,8 +14,9 @@ body {
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.4;
-    color: #333;
-    background-color: #fff;
+    color: rgb(226, 226, 226);
+    background-color: rgb(29, 29, 29);
+    text-align: center;
 }
 
 footer,
@@ -23,18 +24,39 @@ nav {
     display: block;
 }
 
+a {
+    text-decoration: none;
+}
+
+.navbar li{
+    font-size: 15px;
+    font-family: "Impact", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2pt;
+    color: rgb(255, 162, 32);
+    background-color: rgba(0,0,0,.6);
+    border:#000;
+    border-style: ridge;
+    border-width: 3px;
+    display: inline;
+    padding: 15px;
+    margin: 5px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Impact', sans-serif;
 }
 
 h1 {
-    line-height: 50px;
-    font-weight: 900;
+    line-height: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    color: #e91c1c;
+    color: rgb(255, 162, 32);
     text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    letter-spacing: 2pt;
 }
 
 h1::after { /* This is the underline*/
@@ -42,19 +64,18 @@ h1::after { /* This is the underline*/
     content: "";
     height: 2px;
     width: 150px;
-    background: #e91c1c;
+    background: rgb(255, 162, 32);
     margin: 5px auto 40px;
     box-shadow: 5px 2px 3px rgba(0,0,0,0.5);
 }
 
 h2 {
     line-height: 50px;
-    color: #e91c1c;
+    color: rgb(255, 162, 32);
 }
 
 h3 {
     line-height: 30px;
-    padding-bottom: 20px;
 }
 
 h4 {
@@ -82,12 +103,6 @@ p {
 section {
     padding-top: 50px;
     margin-top: 50px;
-}
-
-.navbar {
-    height: 105px;
-    max-height: 340px;
-    display: block;
 }
 
 .container {
@@ -156,9 +171,10 @@ section {
 }
 
 .head-main {
+    background: rgba(0,0,0,0.6);
     text-shadow: 2px 4px 5px rgba(0,0,0,0.9);
     font-variant: small-caps;
-    color: #fff;
+    color: rgb(255, 162, 32);
     letter-spacing: 5pt;
     word-spacing: 21pt;
     font-size: 4.5em;
@@ -198,10 +214,11 @@ section {
     margin: 0px auto;
     background-color: rgba(100, 65, 0, .3);
     box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.5);
+    width: 786px;
 }
 
 #apply {
-    background-color: #f5f3f3;
+    background-color: #4d4d4d;
 }
 
 .application {
@@ -209,7 +226,7 @@ section {
     padding: 10px;
     border-radius: 0px;
     margin: 0px auto;
-    background-color: rgba(100, 65, 0, .3);
+    background-color: rgba(247, 160, 0, 0.244);
     box-shadow: -1px -1px 1px 0 rgba(0,0,0,0.1), 1px 2px 10px 0 rgba(0,0,0,0.5);
 }
 
@@ -242,7 +259,7 @@ section {
     font-size: 15px;
     outline: none;
     font-weight: 600;
-    color: #8d8e0f;
+    color: #ffffff;
     padding: 2% 1% 2% 7%;
     width: 80%;
     border-top: 1px solid #090b0d;
@@ -257,11 +274,11 @@ section {
 }
 
 .application input[type="text"]:hover {
-    box-shadow: 0 0 10px rgba(100, 65, 0, .8);
+    box-shadow: 0 0 10px rgba(24, 24, 24, 0.8);
 }
 
 .form-spacer {
-    padding: 30px 39px;
+    padding: 20px 39px;
 }
 
 .terms {
@@ -279,6 +296,11 @@ section {
     float: right;
 }
 
+.submit {
+    display: block;
+    margin-left: 0%;
+}
+
 .submit input[type="submit"] {
     color: rgb(225,225,225);
     cursor: pointer;
@@ -288,6 +310,7 @@ section {
     text-align: center;
     font-family: 'Raleway', sans-serif;
     margin: 30px 6%;
+    margin-left: -25%;
     padding: 7px 0px;
     width: 25%;
     height: 50px;
@@ -296,7 +319,6 @@ section {
     border-radius: 7px;
     background-color: #797a7b;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .3);
-
 }
 
 .submit input[type="submit"]:hover {
@@ -305,12 +327,17 @@ section {
     box-shadow: inset 1px 2px 15px 0 rgba(0,0,0,0.5);
 }
 
+#video {
+    box-shadow: 5px 5px 8px 0 rgba(240, 120, 0, .7);
+    border: 5px solid #000 ;
+}
+
 /*==============================
     FOOTER STYLES
     ============================*/
 
 #footer {
-    background-color: rgba(100, 65, 0, .3);
+    background-color: rgba(63, 63, 63, 0.3);
     color: #000;
     text-shadow: 2px 2px 8px 0 rgba(0,0,0,.4);
     padding: 20px 50px 20px 50px;

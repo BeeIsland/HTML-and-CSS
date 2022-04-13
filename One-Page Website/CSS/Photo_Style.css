@@ -2,10 +2,11 @@
     GALLERY SECTION ANIMATION
     =========================*/
 
-p {
+.photo-overlay p {
     font-weight: 300;
     line-height: 20px;
     padding-bottom: 15px;
+    text-align: left;
 }
 
 .photo {
@@ -15,15 +16,15 @@ p {
     margin-bottom: 2em;
     overflow: hidden;
     border-radius: 8px;
-    padding: 1px;
+    padding: 0px;
     border: 1px solid #021a40;
     background-color: rgb(255, 174, 0);
     box-shadow: 2px 2px 10px rgba(0,0,0,.7);
+    margin: 10px;
 }
 
 .photo-container {
     text-align: center;
-    margin: 15px auto;
     width: 240px;
     height: 135px;
 }
@@ -46,13 +47,15 @@ p {
     justify-content: center;
     align-items: center;
     background: rgba(0,0,0,.5);
+    border-radius: 6px;
 }
 
 .white-head {
-    color: #c9bdaa;
+    color: #ffffff;
     margin-top: 20px;
     line-height: 10px;
     padding-bottom: 0px;
+    font-weight: 300;
 }
 
 /*===========================
