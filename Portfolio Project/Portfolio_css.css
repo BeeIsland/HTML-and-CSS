@@ -17,7 +17,7 @@ h1 {
 h1:hover {
     filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
     transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
-    transition: transform 1s; /* This causes the transformation to last 1 second */
+    transition: all 1s; /* This causes the transformation to last 1 second */
 }
 
 /* Styling for portfolio title text */
@@ -41,6 +41,10 @@ p:hover {
 	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
 }
 
+.offset {
+    padding-left: 6em;
+}
+
 /* Center class - this applies to all elements with the class "center" */
 .center {
     text-align: center; /* This center aligns the text */
@@ -48,7 +52,7 @@ p:hover {
 
 /* Center class hover effect - This only affects the quote, github link, and footer */
 .center:hover {
-    transition: transform 2s; /* This makes the transform effect last 2 seconds */
+    transition: all 2s; /* This makes the transform effect last 2 seconds */
     transform: scale(1.1); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
 }
 
@@ -64,8 +68,7 @@ q {
 
 /* Image elements */
 img {
-    filter: grayscale(75%); /* This rids our pictures of 75% of their color */
-    border-radius: 8px; /* Gives all images slightly rounded corners */
+    filter: grayscale(50%); /* This rids our pictures of 75% of their color */
     max-width: 100%; /* Ensures all images stay within the width of their container */
     height: 340px; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
@@ -75,9 +78,27 @@ img {
 
 /* Image element hover effects */
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 1s; /* Transition lasts 1 second */
+	filter: grayscale(30%);  /* Brings back most of the image's color when hovered over */
+    transition: all 1s; /* Transition lasts 1 second */
 	transform: scale(1.1); /* Image is increased slightly when hovered over */
+}
+
+/*This allows the square images to be flush with their contianer and still expand when hovered*/
+.blockImages {
+    position: relative;
+    width: 100%;
+    overflow: clip;
+    z-index: 1;
+    min-width: 100%;
+    margin: 0px;
+    height: 100%;
+    padding: 0px;
+}
+
+/*Shrinks the github logo image(for fun)*/
+#shrinky:hover {
+    transform: scale(.25);
+    transition: transform 2s;
 }
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
@@ -94,16 +115,24 @@ footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
     background-color: white;
 }
+
+/*Styling for text in footer*/
+footer a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 200;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 /***** END OF GENERAL STYLING *****/
 
 /***** NAVBAR STYLING *****/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: black; /* This colors the navbar black */
+    background-color: rgb(18, 134, 0); /* This colors the navbar black */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
-    z-index: 1; /* This ensures other elements don't display over the navbar */
+    z-index: 5; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
     animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
 }
@@ -152,7 +181,7 @@ footer {
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
+    background-color: darkgreen;
 }
 /***** END OF NAVBAR STYLING *****/
 
@@ -205,6 +234,7 @@ footer {
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
     background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
+    z-index: 0;
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
@@ -221,12 +251,19 @@ footer {
     padding-top: 1.9%;
     height: 400px;
     background-color: #4d4d4d;
+    z-index: 2;
 }
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
     padding-top: 3.5%;
     height: 450px;
+}
+
+/*This class is applied to the columns that contain square images, so that they can be flush to the box. It just overrides the previous code that gives padding.*/
+.padless {
+    padding: 0px;
+    overflow: hidden;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -275,8 +312,8 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: white; /* Turns the background of the submit button white when the user hovers over it */
     color: black; /* Turns the font black when hovered over */
-    transform: scale(1.5); /* Makes the button increase 1.5 times in size */
-    transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
+    transform: scale(1.2); /* Makes the button increase 1.5 times in size */
+    transition: all 1s; /* Makes the transform effect last 1.5 seconds */
 }
 
 /* Form element */
