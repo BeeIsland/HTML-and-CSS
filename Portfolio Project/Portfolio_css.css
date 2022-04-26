@@ -185,10 +185,12 @@ footer {
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+
 @keyframes moveVideoText {
     from {top: -100vw;} /* This sets the position of the video text to above the viewport */
     to {top: 0vw;} /* This moves the video text to the normal positioning on the viewport */
 }
+
 /***** END OF VIDEO STYLING *****/
 
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
