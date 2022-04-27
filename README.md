@@ -12,3 +12,4 @@ The one page website is a website I made that was themed after Portal 2.
 
 The portfolio project is a website I made to represent me,
 and contains information and a contact form.
+visit beeisland.github.io to view it.
