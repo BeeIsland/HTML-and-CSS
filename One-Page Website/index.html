@@ -5,8 +5,9 @@
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="./CSS/Website_Project.css">
+        	<link rel="stylesheet" href="./CSS/Website_Project.css">
 		<link rel="stylesheet" href="./CSS/Photo_Style.css">
+		<script src="./JS/onePageWebsite.js" defer></script>
 	</head>
 	<body>
 		
@@ -14,9 +15,9 @@
 		<div class="wrap">
 			<div class="menu-container">
 				<ul class="navbar">
-					<a href=#home id="link"><li>HOME</li></a>
-					<a href=#gallery><li>GALLERY</li></a>
-					<a href=#apply><li>APPLICATIONS</li></a>
+					<a href=#home id="link" onclick="closeModal()"><li>HOME</li></a>
+					<a href=#gallery onclick="closeModal()"><li>GALLERY</li></a>
+					<a href=#apply onclick="closeModal()"><li>APPLICATIONS</li></a>
 				</ul>
 			</div>
 		</div>
@@ -40,7 +41,7 @@
 				<div class="flex-container">
 				
 					<!--- PHOTO-CONTAINER 1 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(1);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_1.png" alt="Repulsion Gel">
 							<div class="photo-overlay">
@@ -52,7 +53,7 @@
 					<!--- END PHOTO-CONTAINER 1 --->
 					
 					<!--- PHOTO-CONTAINER 2 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(2);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_2.png" alt="Staff Member">
 							<div class="photo-overlay">
@@ -64,19 +65,19 @@
 					<!--- END PHOTO-CONTAINER 2 --->
 					
 					<!--- PHOTO-CONTAINER 3 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(3);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_3.png" alt="Companion Cube">
 							<div class="photo-overlay">
 								<h3 class="white-head">Companion Cube</h3>
-								<p>It holds open doors and presses buttons, what a friend!<span style="color: red; font-size:10px;"><br>*Do not brefriend the cube</span></p>
+								<p>It holds open doors and presses buttons, what a friend!<span style="color: red; font-size:10px;"><br>*Do not befriend the cube</span></p>
 							</div>
 						</div>
 					</div>
 					<!--- END PHOTO-CONTAINER 3 --->
 					
 					<!--- PHOTO-CONTAINER 4 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(4);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_4.png" alt="GLaDOS">
 							<div class="photo-overlay">
@@ -88,7 +89,7 @@
 					<!--- END PHOTO-CONTAINER 4 --->
 					
 					<!--- PHOTO-CONTAINER 5 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(5);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_5.png" alt="Portal Gun">
 							<div class="photo-overlay">
@@ -100,7 +101,7 @@
 					<!--- END PHOTO-CONTAINER 5 --->
 					
 					<!--- PHOTO-CONTAINER 6 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(6);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_6.png" alt="Propulsion Gel">
 							<div class="photo-overlay">
@@ -112,7 +113,7 @@
 					<!--- END PHOTO-CONTAINER 6 --->
 					
 					<!--- PHOTO-CONTAINER 7 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(7);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_7.png" alt="Atlas &amp; P-body">
 							<div class="photo-overlay">
@@ -124,7 +125,7 @@
 					<!--- END PHOTO-CONTAINER 7 --->
 					
 					<!--- PHOTO-CONTAINER 8 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(8);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_8.png" alt="Turret">
 							<div class="photo-overlay">
@@ -136,7 +137,7 @@
 					<!--- END PHOTO-CONTAINER 8 --->
 					
 					<!--- PHOTO-CONTAINER 9 --->
-					<div class="photo-containter">
+					<div class="photo-containter" onclick="openModal();currentSlide(9);">
 						<div class="photo">
 							<img src="./images/thumb/thumbnail_9.png" alt="Personality Core">
 							<div class="photo-overlay">
@@ -198,6 +199,105 @@
 			www.aperturescience.portal &nbsp; &nbsp; &copy;1943
 		</div>
 		<!--- END FOOTER --->
+
+		<!--- LIGHTBOX --->
+		<div id="lightbox" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="slides">
+					<div class="numbertext">1 / 9</div>
+					<img src="./images/Fulls/thumbnail_1.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">2 / 9</div>
+					<img src="./images/Fulls/thumbnail_2.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">3 / 9</div>
+					<img src="./images/Fulls/thumbnail_3.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">4 / 9</div>
+					<img src="./images/Fulls/thumbnail_4.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">5 / 9</div>
+					<img src="./images/Fulls/thumbnail_5.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">6 / 9</div>
+					<img src="./images/Fulls/thumbnail_6.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">7 / 9</div>
+					<img src="./images/Fulls/thumbnail_7.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">8 / 9</div>
+					<img src="./images/Fulls/thumbnail_8.png" style="width:800px">
+				</div>
+
+				<div class="slides">
+					<div class="numbertext">9 / 9</div>
+					<img src="./images/Fulls/thumbnail_9.png" style="width:800px">
+				</div>
+
+
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_1.png" onclick="currentSlide(1)" alt="This gel sticks to anything and creates a bouncy surface that repels anything!">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_2.png" onclick="currentSlide(2)" alt="Just imagine yourself helping test our amazing products!">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_3.png" onclick="currentSlide(3)" alt="It holds open doors and presses buttons, what a friend!">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_4.png" onclick="currentSlide(4)" alt="The forefront of our robotic intelligence programand our greatest creation!">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_5.png" onclick="currentSlide(5)" alt="Allows the user to create linked portals on any designated surface!">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_6.png" onclick="currentSlide(6)" alt="Propels anything that comes into contact with it away at incredible speeds">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_7.png" onclick="currentSlide(7)" alt="Robots driven by AI that were designed to complete the more dangerous tests">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_8.png" onclick="currentSlide(8)" alt="The humble turret is our means of testing for weakness in any of our products">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/Thumb/thumbnail_9.png" onclick="currentSlide(9)" alt="These are the by-products of our many attempts to create a perfect AI. They are nichely useful.">
+				</div>
+			</div>
+		</div>
 
 	</body>
 </html>

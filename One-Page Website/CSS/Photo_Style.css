@@ -15,9 +15,9 @@
     line-height: 0;
     margin-bottom: 2em;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 0px;
-    border: 1px solid #021a40;
+    border: 4px solid #021a40;
     background-color: rgb(255, 174, 0);
     box-shadow: 2px 2px 10px rgba(0,0,0,.7);
     margin-left: 10px;
@@ -49,7 +49,7 @@
     justify-content: center;
     align-items: center;
     background: rgba(0,0,0,.5);
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .white-head {
@@ -67,7 +67,7 @@
 .photo-overlay {
     opacity: 0;
     transition: opacity .1s;
-    border-radius: 10px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -88,4 +88,133 @@
 
 .photo:hover img {
     transform: scale(1.1);
+}
+
+/* LIGHTBOX */
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create Columns */
+.column {
+    float: left;
+    width: 11%;
+}
+
+/* Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 60%;
+    max-width: 1200px;
+}
+
+/* Hide the slides by default */
+.slides {
+    display: none;
+    background-color: black
+}
+
+/* Buttons */
+.close {
+    color: white;
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgb(87, 87, 87);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0px;
+}
+
+/* Button hover */
+.close:hover, .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(167, 167, 167, 0.8);
+}
+
+/* Number text */
+.numbertext {
+    color: #e7e7e7;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+img.demo {
+    opacity: 0.6;
+    width: 100%;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
