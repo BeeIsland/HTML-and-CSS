@@ -12,6 +12,7 @@
         </head>
 <body>
         <div class="container">
+                <!-- Navbar -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-success">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
@@ -32,12 +33,14 @@
                                 </form>
                         </div>
                 </nav>
+                <!-- Title Card -->
                 <div class="jumbotron jumbotron-fluid bg-success text-center">
                         <div class="container">
                                 <h1 class="display-4 text-light">Northwest Trees</h1>
                                 <p class="lead text-light">This website is dedicated to the beautiful trees of the Pacific Northwest</p>
                         </div>
                 </div>
+                <!-- Column 1 -->
                 <div class="container mb-2">
                         <div class="row">
 
@@ -66,7 +69,7 @@
                                 </div>
                         </div>
                 </div>
-
+                <!-- Cards -->
                 <div class="container mt-3">
                         <div class="row">
                                 <div id="fir" class="col card px-0 mx-3">
@@ -116,16 +119,70 @@
                         </div>
                 </div>
 
-                <div class="container text-center mt-4 bg-success">
+                <!-- Modal Link -->
+                <div class="jumbotron jumbotron-fluid bg-success mt-5 text-center">
+                        <div class="container">
+                                <h1 class="display-4 hidden-sn-down" style="color: white;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 900;text-transform: uppercase;">Saplings for Sale</h1>
+                                <p class="lead">Trees aren't just for looking at, get a tree of you own!</p>
+                                <button class="btn btn-lg btn-outline-dark mt-3" type="button" data-toggle="modal" data-target="#ContactForm">Get a Tree!</button>
+                        </div>
+                </div>
+
+                <!-- Form -->
+                <div class="container text-center mt-4 bg-success" id="form">
                         <form>
                                 <h1 class="text-light display-4 mb-4 pt-3" style="font-size: 40px;">Questions?</h1>
                                 <div class="form-group">
                                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                 </div>
-                                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                                <a tabindex="0" class="btn btn-lg btn-light mb-4 mt-3 popover-hover" role="button" data-toggle="popover" data-trigger="focus" title="Confused?" data-content="Send us your email and we'll get back to you and answer any relevant questions!">Submit</a>
                         </form>
                 </div>
+                <!-- Modal -->
+                <div id="ContactForm" class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
 
+                                        <!-- Modal Title-->
+                                        <div class="modal-header">
+                                                <h5 class="modal-title">Contact to Get a Sapling</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+
+                                        <!-- Modal Inputs -->
+                                        <div class="modal-body">
+                                                <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="First Name" aria-label="fName" aria-describedby="basic-addon1">
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Last Name" aria-label="lName" aria-describedby="basic-addon1">
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon2">
+                                                </div>
+
+                                                <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                                <span class="input-group-text">Questions<br>&<br>Statements</span>
+                                                        </div>
+                                                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                </div>
+                                        </div>
+
+                                        <!-- Modal Buttons-->
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-success">Send</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+
+                <!-- Footer -->
                 <div id="contact" class="container">
                         <ul class="nav nav-inline">
                                 <li class="nav-item">
@@ -150,5 +207,20 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script>
+        //This one creates a pop-up on click
+        $('.popover-dismiss').popover({
+                trigger: 'focus'
+        })
+
+        //This one creates a pop-up on hover
+        $('.popover-hover').popover({
+                trigger: 'hover'
+        })
+
+</script>
+
+
 </body>
 </html>
