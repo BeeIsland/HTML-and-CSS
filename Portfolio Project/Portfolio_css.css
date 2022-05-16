@@ -11,6 +11,8 @@ h1 {
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
     color: #1a1a1a; 
+    width: 90%;
+    margin-left: 5%;
 }
 
 /* Heading 1 element hover effect */
@@ -47,6 +49,8 @@ p:hover {
 
 /* Center class - this applies to all elements with the class "center" */
 .center {
+    margin-left: 5%;
+    width: 90%;
     text-align: center; /* This center aligns the text */
 }
 
@@ -95,9 +99,9 @@ img:hover {
     padding: 0px;
 }
 
-/*Shrinks the github logo image(for fun)*/
+/*Expands the element*/
 #shrinky:hover {
-    transform: scale(.25);
+    transform: scale(1.1);
     transition: transform 2s;
 }
 
